@@ -3,7 +3,7 @@ import time
 import csv
 import os
 
-URL = 'https://www.avito.ru/'
+URL = 'https://www.avito.ru/' # TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT !!!!!
 FILE = 'cars_selenium.csv'
 
 
