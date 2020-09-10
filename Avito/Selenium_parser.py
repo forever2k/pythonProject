@@ -6,7 +6,6 @@ import os
 URL = 'https://www.avito.ru/'
 FILE = 'cars_selenium.csv'
 
-
 from selenium import webdriver
 import time
 import csv
@@ -38,6 +37,7 @@ def get_pagination_limit():
     else:
         return 1
 
+
 def parse():
     limit = get_pagination_limit()
 
@@ -54,7 +54,7 @@ def parse():
 
 
 def parse_page(start_page, limit):
-    for i in range(start_page, limit):
+    for i in range(start_page, limit + 1):
         driver.get(driver.current_url + '?cd=1&p=' + str(i))
         name_find = driver.find_elements_by_class_name('snippet-title')
         name = []
@@ -89,6 +89,7 @@ def parse_page(start_page, limit):
                 writer.writerow([item[0], item[1], item[2], item[3]])
 
     os.startfile(FILE)
+
 
 if __name__ == '__main__':
     parse()
