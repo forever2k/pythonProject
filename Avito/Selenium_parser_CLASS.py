@@ -11,6 +11,7 @@ class AvitoParser:
 
     def __init__(self, driver):
         self.driver = driver
+        driver.implicitly_wait(4)
 
     def parse(self):
         limit = self.get_pagination_limit()

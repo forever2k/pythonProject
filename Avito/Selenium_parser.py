@@ -18,6 +18,7 @@ FILE = 'cars_selenium.csv'
 def main():
     global driver
     driver = webdriver.Chrome()
+    driver.implicitly_wait(4)
     driver.get(URL)
     avito_elem = driver.find_element_by_name('category_id')
     avito_elem.send_keys("Автомобили")
