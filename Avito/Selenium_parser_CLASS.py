@@ -20,14 +20,14 @@ class AvitoParser:
             self.parse_page(1, limit)
 
     def go_to_car_page(self):
-        self.driver.get(URL)
-        avito_elem = self.driver.find_element_by_name('category_id')
+        driver.get(URL)
+        avito_elem = driver.find_element_by_name('category_id')
         avito_elem.send_keys("Автомобили")
         time.sleep(3)
-        self.driver.find_element_by_link_text("BMW").click()
+        driver.find_element_
         time.sleep(3)
-        url1 = self.driver.find_element_by_link_text("5 серия").click()
-        return self.driver.current_url
+        url1 = driver.find_element_by_link_text("5 серия").click()
+        return driver.current_url
 
     def get_pagination_limit(self):
         self.go_to_car_page()
@@ -79,7 +79,6 @@ class AvitoParser:
 def main():
     global driver
     driver = webdriver.Chrome()
-    driver.get(URL)
     parser = AvitoParser(driver)
     parser.parse()
     os.startfile(FILE)
