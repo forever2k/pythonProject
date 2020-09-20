@@ -24,9 +24,7 @@ class AvitoParser:
         driver.get(URL)
         avito_elem = driver.find_element_by_name('category_id')
         avito_elem.send_keys("Автомобили")
-        time.sleep(3)
-        driver.find_element_
-        time.sleep(3)
+        driver.find_element_by_link_text("BMW").click()
         url1 = driver.find_element_by_link_text("5 серия").click()
         return driver.current_url
 
